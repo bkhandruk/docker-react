@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR '/usr/apps/react_app'
+
+COPY package.json yarn.lock ./
+
+RUN yarn
+
+# COPY . ./
+
+CMD ["yarn", "start"]
